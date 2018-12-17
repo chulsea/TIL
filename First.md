@@ -24,5 +24,5 @@ public class Main{
 
 [naver](https://www.naver.com/)
 
-![싸피](C:\Users\student\Desktop\test\ssafy.PNG)
+![싸피](ssafy.PNG)
 
