@@ -62,3 +62,49 @@ mode는 'r'(읽기 모드), 'w'(쓰기 모드) 등을 많이 쓴다.
 해당 파일에 data를 쓰는 메서드, writelines는 list를 파일에 쓰는 메서드
 
 [코드보러가기](make_txt.py)
+
+- readline / readlines
+
+readline은 파일내용을 한 줄로 읽어서 return
+readlines는 파일내용을 list 형태로 return
+
+### 4. 웹 스크래핑
+
+- requests
+
+    + requests.get()
+
+        requests.get("주소")
+        주소에 해당하는 html 문서를 요청한다.
+        이 결과로 Response 객체가 return된다.
+
+        Response 객체의 html 문서를 알고 싶으면 text 변수를 응답 코드를 알고 싶다면 status_code를 변수를 보면 된다.    
+        
+        ```python
+        import requests
+
+        res = requests.get("https://www.naver.com")
+        res.text # naver의 응답 html 
+        res.status_code # naver의 응답 코드
+        ```
+- BeautifulSoup
+    
+    bs4 내부에 있는 생성자 이름
+    requests.get으로 받은 응답 html을 이쁘게 볼 수 있도록 만들어준다.
+
+    ```python
+    import requests
+    from bs4 import BeautifulSoup
+    res = requests.get("https://www.naver.com")
+    BeautifulSoup(res.text, "html.parser")
+    ```
+    
+    + select_one(selector)
+
+        selector를 이용해서 해당하는 하나의 html element를 가져오는 함수
+
+    + select
+        
+        selector를 이용해서 해당하는 여러 개의 html element를 가져오는 함수
+
+[코드보러가기](scraping/index.py)

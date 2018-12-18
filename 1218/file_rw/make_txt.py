@@ -26,8 +26,21 @@ with open("new.txt", "w", encoding="utf-8") as f:
         f.write(data)
 """
 
-menu = ["돈까스", "치즈돈까스", "고구마크림돈까스", "치킨까스", "생선까스"]
-menus = list(map(lambda x: x + "\n", menu))
-# writeline
-with open("menu.txt", "w", encoding="utf-8") as f:
-    f.writelines(menus)
+# menu = ["돈까스", "치즈돈까스", "고구마크림돈까스", "치킨까스", "생선까스"]
+# menus = list(map(lambda x: x + "\n", menu))
+# # writeline
+# with open("menu.txt", "w", encoding="utf-8") as f:
+#     f.writelines(menus)
+
+"""
+with open("new.txt", "w", encoding="utf-8") as f:
+    for i in range(1,11):
+        data = f"{i}번째 줄입니다.\n"
+        f.write(data)
+"""
+
+with open("new.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()
+    for l in lines:
+        print(l.strip())
+        
