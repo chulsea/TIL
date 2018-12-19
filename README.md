@@ -26,3 +26,10 @@
 ## 2018 12.19 Wendesday
 
 ***요약***
+
+1. flask
+2. render_template
+3. static
+4. Variable Rules
+
+[수업 노트 보기](1219/README.md)
