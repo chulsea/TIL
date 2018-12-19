@@ -1,0 +1,12 @@
+.side {
+    position: fixed;
+    width: 45%;
+    min-height: 100%;
+    background: #212529;
+    padding: 12em 3em;
+    user-select: none;
+}
+
+.side__info > h1 {
+    color: #ffffff;
+}

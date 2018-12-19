@@ -22,3 +22,7 @@
 4. crawling
 
 [수업 노트 보기](1218/README.md)
+
+## 2018 12.19 Wendesday
+
+***요약***

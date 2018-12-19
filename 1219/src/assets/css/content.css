@@ -1,0 +1,52 @@
+.container > main {
+    width: 55%;
+    min-height: 100%;
+    margin-left: 45%;
+}
+.container .login {
+    padding: 15em 3em;
+}
+
+.login__box label{
+    display: block;
+    margin: 10px 0;
+}
+
+.login__box label span {
+    display: inline-block;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.login__box label input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #e9e9e9;
+}
+
+.login__box .login__box--btn {
+    display: inline-block;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.login__box a.login__box--btn:hover {
+    text-decoration: underline;
+    color: #228be6;
+}
+
+.login__box .login--btn {
+    color: #ffffff;
+    width: 70px;
+    font-size: 17px;
+    background: #228be6;
+}
+
+.login__box .login--btn:hover {
+    background: #008eff;
+}
+
