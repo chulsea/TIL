@@ -33,3 +33,9 @@
 4. Variable Rules
 
 [수업 노트 보기](1219/README.md)
+
+## 2018 12.20 Thursday
+
+***요약***
+
+1. 
