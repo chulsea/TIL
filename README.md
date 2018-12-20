@@ -38,4 +38,7 @@
 
 ***요약***
 
-1. 
+1. flask request
+2. flask redirect / error
+
+[수업 노트 보기](1220/README.md)
