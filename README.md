@@ -47,6 +47,7 @@
 
 ***요약***
 
-1. 
+1. flask response, cookies, sessions, flash message, layout, application setup
+2. heroku deploy
 
 [수업 노트 보기](2018/December/1220/README.md)
