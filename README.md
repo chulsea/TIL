@@ -1,6 +1,6 @@
 # SSAFY 교육용 (TIL)
 
-[강의자료 주소](http://github.com/djpy2/)
+[강의자료 주소](https://github.com/djpy2/)
 [python 강의 자료 주소](https://github.com/djpy2/python101)
 
 ## 2018 December
