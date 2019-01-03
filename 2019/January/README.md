@@ -21,8 +21,7 @@
 
 2. Node.js
 
-   - javascript chrome V8 engine
-
-
+    - node.js overview
+    - javascript chrome V8 engine
 
 [학습노트 보러가기](days/0103.md)
