@@ -25,3 +25,42 @@
     - javascript chrome V8 engine
 
 [학습노트 보러가기](days/0103.md)
+
+## 4일 금요일
+
+***학습요약***
+
+1. basic python
+
+
+2. Node.js
+    
+    > 다음 사이트의 목차에서 학습할 내용을 참고하였습니다.
+    >
+    > [참고](https://opentutorials.org/module/938)
+    
+    - Node.js 내장객체
+        
+        1. global 
+        2. console
+        3. process
+        4. exports
+        5. __dirname / __filename
+
+    - Node.js 내장모듈 
+        
+        1. os
+        2. path
+        3. url
+        4. querystring
+        5. util
+        6. fs
+        7. crypto
+    
+    - Node.js 이벤트
+
+    - Http 모듈로 웹서버 만들기
+    
+    - 라우팅 적용
+
+[학습노트 보러가기](days/0104.md)
