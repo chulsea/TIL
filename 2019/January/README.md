@@ -69,3 +69,13 @@
 ***학습***
 
 1. bash cil command
+
+2. python recursion
+
+## 8일 화요일
+
+***학습***
+
+1. python recursion
+
+2. 
