@@ -70,6 +70,8 @@
 
 1. bash cil command
 
+[학습노트 보러가기](days/0107.md)
+
 ## 8일 화요일
 
 ***학습***
@@ -81,6 +83,16 @@
     - sequelize.js
     - passport.js
 
+[학습노트 보러가기](days/0108.md)
+
 ## 10일 목요일
 
 1. python module / error and exception
+
+[학습노트 보러가기](days/0110.md)
+
+## 14일 월요일
+
+1. algorithm
+
+[학습노트 보러가기](days/0114.md)
