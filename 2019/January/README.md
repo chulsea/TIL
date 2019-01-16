@@ -96,3 +96,7 @@
 1. algorithm
 
 [학습노트 보러가기](days/0114.md)
+
+## 16일 수요일
+
+1. python OOP
