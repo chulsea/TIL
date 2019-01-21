@@ -9,6 +9,7 @@ def find_max(counts):
     for idx, c in enumerate(counts[::-1]):
         if c != 0:
             return len(counts) - idx - 1
+
 def dump(count, n, m, temp):
     count[n] -= temp
     count[m] -= temp

@@ -1,18 +1,14 @@
 def solution(M, N, x, y):
+    temp = []
+    total = N // 2 if N % 2 == 0 and M % 2 == 0 else N - 1
+    a = 1
+    for _ in range(total):
+        a = (a + M) % N
+        a = N if a == 0 else a
+        temp.append(a)
+    print(temp)
     answer = 1
-    i = j = 1
-    if M % 2 == 0 and N % 2 == 0:
-        total = M * N // 2
-    else:
-        total = M * N
-    count = 0
-    while count < total and (i != x or j != y):
-        answer += 1
-        i = 1 if i + 1 > M else i + 1
-        j = 1 if j + 1 > N else j + 1
-        count += 1
-    if total == count:
-        return -1
+
     return answer
 
 def main():
