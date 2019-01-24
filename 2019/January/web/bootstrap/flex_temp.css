@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    color: #fff;
+}
+
+.item {
+    text-align: center;
+    font-size: 100px;
+}
+
+.item1 {
+    background: pink;
+}
+
+.item2 {
+    background: red;
+}
+.item3 {
+    background: darkorange;
+}
+.item4 {
+    background: yellow;
+}
+.item5 {
+    background: darkgreen;
+}
+.item6 {
+    background: blue;
+}
+.item7 {
+    background: skyblue;
+}
+.item8 {
+    background: navy;
+}
+.item9 {
+    background: purple;
+}
+.item10 {
+    background: brown;
+}
+.item11 {
+    background: darkgray;
+}
+.item12 {
+    background: #000;
+}

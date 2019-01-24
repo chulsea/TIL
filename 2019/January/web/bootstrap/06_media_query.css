@@ -1,0 +1,81 @@
+@media (max-width: 500px){
+    h2 {
+        color: darkgreen;
+    }
+}
+
+p.orientation::after {
+    content: "가로입니다.";
+}
+
+@media (orientation: portrait) {
+    p.orientation::after {
+        content: "세로입니다.";
+    }
+}
+
+@media (min-width: 500px){
+    h1 {
+        color: red;
+    }
+}
+@media (min-width: 550px){
+    .rainbow {
+        color: orange;
+    }
+}
+@media (min-width: 600px){
+    .rainbow {
+        color: yellow;
+    }
+}
+@media (min-width: 650px){
+    .rainbow {
+        color: green;
+    }
+}
+@media (min-width: 700px){
+    .rainbow {
+        color: blue;
+    }
+}
+
+@media (min-width: 750px){
+    .rainbow {
+        color: navy;
+    }
+}
+
+@media (min-width: 800px){
+    .rainbow {
+        color: purple;
+    }
+}
+
+@media (max-height: 500px) and (max-width: 500px){
+    h3 {
+        color: violet;
+    }
+}
+
+@media only print{
+    h4{
+        color: red;
+    }
+}
+
+@media (min-width: 576px){
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 992px){
+
+}
+
+@media (min-width: 1200px){
+
+}
