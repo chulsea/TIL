@@ -1,0 +1,13 @@
+.subtitle {
+    text-align: center !important;
+    margin: 3rem 0;
+}
+
+.subtitle > h3::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    padding-bottom: 1em;
+    border-bottom: 3px solid orange;
+}

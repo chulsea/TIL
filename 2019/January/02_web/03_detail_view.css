@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&subset=korean');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.subtitle {
+    text-align: center !important;
+    margin: 3rem 0;
+}
+
+.subtitle > h3::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    padding-bottom: 1em;
+    border-bottom: 3px solid orange;
+}
+
+.card > img {
+    cursor: pointer;
+}
+
+.modal__movie > img {
+    display: block;
+    width: 100%;
+}
+
+.modal__movie--details > p {
+    font-family: 'Nanum Gothic', sans-serif;
+}
