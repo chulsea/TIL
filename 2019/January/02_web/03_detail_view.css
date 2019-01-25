@@ -5,6 +5,52 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+.container {
+    margin: 4em auto;
+}
+
+.intro {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("01_layout_main.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro:hover {
+    background: linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url("01_layout_main.jpeg");
+}
+
+.intro-title {
+    width: 350px;
+    color: #fff;
+    font: bold 30px 'Nanum Gothic', sans-serif;
+    text-shadow: 1px 2px #000;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 3rem;
+    background: #a9a9a9;
+}
+
+footer > .madeby {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+footer > a {
+    color: #fff;
+}
+
+footer > a:hover {
+    color: #000;
+}
+
 .subtitle {
     text-align: center !important;
     margin: 3rem 0;
@@ -17,6 +63,10 @@
     width: 70px;
     padding-bottom: 1em;
     border-bottom: 3px solid orange;
+}
+
+.card {
+    width: 90%;
 }
 
 .card > img {
