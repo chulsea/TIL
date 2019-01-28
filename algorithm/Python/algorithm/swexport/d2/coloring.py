@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('inputs/coloring_input.txt')
 
+
 def solution(input_list):
     answer = 0
     color_map = [[0 for _ in range(10)] for _ in range(10)]
