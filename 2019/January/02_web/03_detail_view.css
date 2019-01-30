@@ -3,6 +3,7 @@
 
 * {
     font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
@@ -65,11 +66,7 @@ footer > a:hover {
     border-bottom: 3px solid orange;
 }
 
-.card {
-    width: 90%;
-}
-
-.card > img {
+.card img {
     cursor: pointer;
 }
 
