@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block body %}
+    <h1>Hello Stranger!</h1>
+    <a href="/users/create">유저만들기</a>
+    <h1>유저목록</h1>
+    <ul class="users">
+    {% for user in users %}
+        <li class="user">
+            유저이름: {{user.username}} / 이메일: {{user.email}}    
+        </li>
+        <a href="./users/{{user.id}}">상세히 보기</a>
+    {% endfor %}
+    </ul>
+{% endblock %}

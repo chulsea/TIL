@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}유저생성{% endblock %}
+{% block body %}
+    <h1>유저생성하기</h1>
+    <form action="create" method="POST">
+        <label for="username">
+            유저이름: <input type="text" id="username" name="username" placeholder="이름을 입력하세요" required>
+        </label>
+        <label for="email">
+            이메일: <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+        </label>
+        <button type="submit">가입하기</button>
+    </form>
+{% endblock %}

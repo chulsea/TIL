@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}유저정보수정{% endblock %}
+{% block body %}
+    <h1>유저정보수정하기</h1>
+    <form action="." method="POST">
+        <input type="hidden" name="userid" value="{{user.id}}">
+        <label for="username">
+            유저이름: <input type="text" id="username" name="username" value="{{user.username}}" placeholder="이름을 입력하세요" required>
+        </label>
+        <label for="email">
+            이메일: <input type="email" id="email" name="email" value="{{user.email}}" placeholder="이메일을 입력하세요" required>
+        </label>
+        <button type="submit">정보수정하기</button>
+    </form>
+{% endblock %}

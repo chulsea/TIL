@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}유저정보{% endblock %}
+{% block body %}
+    <div class="details">
+        <div class="username">
+            유저이름 : {{user.username}}
+        </div>
+        <div class="email">
+            유저이메일 : {{user.email}}
+        </div>
+        <a href="/">유저 목록 보기</a>
+        <a href="./update/{{user.id}}">정보수정하기</a>
+        <a href="./delete/{{user.id}}">삭제하기</a>
+    </div>
+{% endblock %}
