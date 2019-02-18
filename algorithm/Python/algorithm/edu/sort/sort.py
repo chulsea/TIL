@@ -46,6 +46,31 @@ def counting(input_list):
     return answer
 
 
+def __partition(input_list, l, r):
+    pivot = input_list[l]
+    i, j = l, r
+    while i < j:
+        while input_list[i] <= pivot:
+            i += 1
+            if i == r:
+                break
+        while input_list[j] >= pivot:
+            j -= 1
+            if j == l:
+                break
+        if i < j:
+            input_list[i], input_list[j] = input_list[j], input_list[i]
+    input_list[l], input_list[j] = input_list[j], input_list[l]
+    return j
+
+
+def quick(input_list, l, r):
+    if l < r:
+        mid = __partition(input_list, l, r)
+        quick(input_list, l, mid - 1)
+        quick(input_list, mid + 1, r)
+
+
 def main():
     arr = [55, 7, 78, 12, 42]
     # count = [1, 4, 5, 1, 2, 4, 5, 7, 9, 3]
@@ -53,7 +78,8 @@ def main():
     print(insertion(arr))
     print(counting(arr))
     print(selection(arr))
-
+    quick(arr, 0, len(arr)-1)
+    print(arr)
 
 if __name__ == "__main__":
     main()
