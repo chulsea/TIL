@@ -1,3 +1,4 @@
+
 def process_solution(a, k):
     for i in range(1, k+1):
         print(data[a[i]], end=' ')

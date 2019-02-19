@@ -23,7 +23,7 @@ def main():
         input_list = []
         for _ in range(100):
             input_list.append(list(map(int, input().split())))
-        print(f'#{test_case+1} {solution(input_list)}')
+        print(f'#{test_case + 1} {solution(input_list)}')
 
 
 if __name__ == '__main__':
