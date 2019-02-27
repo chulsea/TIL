@@ -21,7 +21,6 @@ def solution(arr, n, m):
     return pop[1]
 
 
-
 def main():
     test_cases = int(input())
     for test_case in range(test_cases):
