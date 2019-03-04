@@ -13,7 +13,7 @@ def main():
     for test_case in range(test_cases):
         n, m = map(int, input().split())
         arr = list(map(int, input().split()))
-        print(f'#{test_case + 1} {solution(arr, m)}')
+        print('#{} {}'.format(test_case+1, solution(arr, m)))
 
 
 if __name__ == '__main__':

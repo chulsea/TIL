@@ -29,7 +29,7 @@ Queue는 FIFO(First-In-First-Out) 형태의 자료구조
     ```python
     def enqueue(item):
        global rear  
-       if isFull():
+       if is_full():
            print('queue is full')
        else:
            rear += 1
@@ -42,7 +42,7 @@ Queue는 FIFO(First-In-First-Out) 형태의 자료구조
     
     ```python
     def dequeue(item):  
-       if isEmpty():
+       if is_empty():
            print('queue is empty')
        else:
            front += 1
@@ -54,7 +54,7 @@ Queue는 FIFO(First-In-First-Out) 형태의 자료구조
     큐가 공백상태인지 확인하는 연산
     
     ```python
-    def isEmpty():
+    def is_empty():
        return front == rear
     ```
     
@@ -63,7 +63,7 @@ Queue는 FIFO(First-In-First-Out) 형태의 자료구조
     큐가 포화상태인지 확인하는 연산
     
     ```python
-    def isFull():
+    def is_full():
        return rear == len(Q)-1 
     ```
 
