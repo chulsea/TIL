@@ -17,6 +17,7 @@ def solution(n, items, moves):
         nx = x + dx[m]
         if nx < 0 or nx >= n or ny < 0 or ny >= n or board[ny][nx] == 1: # 게임이 끝나는 조건
             return cnt
+
         # 만약 과일을 먹는다면 몸집 그대로
         # 안먹는다면 꼬리 1 자르기
         tflag = False
