@@ -1,23 +1,24 @@
+# 가로 세로로 가장 긴 길이를 찾기
+def __find_short(sides, idx, m):
+    if sides[(idx - 1) % 6][1] != m:
+        result = sides[(idx - 1) % 6][1]
+    elif sides[(idx + 1) % 6][1] != m:
+        result = sides[(idx + 1) % 6][1]
+    return result
+
+
 def solution(n, sides):
     max_w = max_h = 0
     for i in range(len(sides)):
         d, l = sides[i]
         if d < 3:
             if max_w < l:
-                max_w = l
-                w_idx = i
+                max_w, w_idx = l, i
         else:
             if max_h < l:
-                max_h = l
-                h_idx = i
-    if sides[(w_idx - 1) % 6][1] != max_h:
-        b_h = sides[(w_idx - 1) % 6][1]
-    elif sides[(w_idx + 1) % 6][1] != max_h:
-        b_h = sides[(w_idx + 1) % 6][1]
-    if sides[(h_idx - 1) % 6][1] != max_w:
-        b_w = sides[(h_idx - 1) % 6][1]
-    elif sides[(h_idx + 1) % 6][1] != max_w:
-        b_w = sides[(h_idx + 1) % 6][1]
+                max_h, h_idx = l, i
+    b_h = __find_short(sides, w_idx, max_h)
+    b_w = __find_short(sides, h_idx, max_w)
     return (max_w * b_h + b_w * (max_h - b_h)) * n
 
 
