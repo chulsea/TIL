@@ -16,7 +16,7 @@ def main():
     for test_case in range(test_cases):
         e, r = map(int, input().split())
         n = e+1
-        nodes = [[0]*3 for _ in range(n+1)]
+        nodes = [[0]*2 for _ in range(n+1)]
         inputs = list(map(int, input().split()))
         for i in range(e):
             p = i * 2
