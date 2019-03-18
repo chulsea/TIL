@@ -4,7 +4,7 @@ import numpy as np
 a = np.arange(30)
 print(a)
 # reshape을 활용하여 1차원 ndarray를 다차원 배열로 변형할 수 있다.
-print(a.reshape(6,5))
+print(a.reshape(6, 5))
 
 # arange시 step을 줄 수 있다.
 b = np.arange(0, 5, 0.5)  # python의 range와 비슷하게 시작, 끝, step 순으로 numpy ndarray를 만들 수 있다.

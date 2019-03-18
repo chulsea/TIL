@@ -1,6 +1,5 @@
 def merge(arr, l, mid, r):
     i, j, k = l, mid+1, l
-    for i in range
 
 
 def merge_sort(arr, l, r):

@@ -24,6 +24,7 @@ test_array2 = np.array([1, 3, 5, '7'], dtype=np.int)
 print(test_array2.ndim)  # ndim은 number of dimension으로 몇 차원인지 알려주는 변수
 print(test_array2.size)  # size는 해당 ndarray에 있는 데이터의 갯수
 print(test_array2.dtype)  # dtype은 해당 ndarray에 설정된 data type, 각 element가 차지하는 memory의 크기가 결정
+print(test_array2.nbytes)
 """
 basic type / numpy types
 boolean / bool
