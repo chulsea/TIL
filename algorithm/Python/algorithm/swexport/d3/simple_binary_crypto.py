@@ -35,4 +35,3 @@ for test_case in range(test_cases):
     for _ in range(col):
         arr.append(input())
     print('#{} {}'.format(test_case+1, soltuon(arr, col, row)))
-

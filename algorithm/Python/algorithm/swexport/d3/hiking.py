@@ -1,3 +1,7 @@
+import sys
+
+sys.stdin = open('inputs/hiking_input.txt', 'r')
+
 dx = [0, 0, -1, 1]
 dy = [-1, 1, 0, 0]
 
@@ -45,7 +49,7 @@ def main():
         s = 1
         n, k = map(int, input().split())
         arr = [list(map(int, input().split())) for _ in range(n)]
-        print(f'#{tc+1} {solution(arr,k)}')
+        print('#{tc} {ans}'.format(tc=tc+1, ans=solution(arr, k)))
 
 
 if __name__ == '__main__':
