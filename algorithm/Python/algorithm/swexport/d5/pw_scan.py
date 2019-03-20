@@ -34,10 +34,20 @@ def __decode(pw):
         '3211', '2221', '2122', '1411', '1132',
         '1231', '1114', '1312', '1213', '3112'
     ]
-    int_pw = list(map(int, pw))
-    min_pw = min(int_pw)
-    int_pw = list(map(lambda x: str(x // min_pw), int_pw))
-    decoded = "".join(int_pw)
+    p = []
+    check = pw[0]
+    cnt = 1
+    for i in range(1, len(pw)):
+        if pw[i] != check:
+            p.append(cnt)
+            cnt = 1
+            check = pw[i]
+        else:
+            cnt += 1
+    p.append(cnt)
+    min_cnt = min(p)
+    p = list(map(lambda x: str(x // min_cnt), p))
+    decoded = "".join(p)
     for i in range(10):
         if decoded == decoder[i]:
             return i
@@ -45,38 +55,63 @@ def __decode(pw):
 
 def solution(code, n, m):
     answer = 0
-    bin = []
-    for i in range(n):
-        bin.append(__hex_to_bin(code[i]))
-    for y in range(1, n):
-        pw = ''
-        even = odd = cnt = 0
-        first = True
-        pw_cnt = 8
-        for x in range(m*4-1, -1, -1):
-            if bin[y-1][x] == '0' and bin[y][x] == '1':
-                if first:
-                    check = bin[y][x]
-                    cnt = 1
-                    first = False
-                elif check != bin[y][x]:
-                    check = bin[y][x]
-                    pw = str(cnt) + pw
-                    cnt = 1
-                else:
-                    cnt += 1
-                if len(pw) == 4:
-                    temp = __decode(pw)
-                    if pw_cnt & 1:
-                        even += temp
+    check = set()
+    password = []
+    inp = []
+    for j in range(n):
+        temp = code[j].strip('0').split('0000')
+        for i in temp:
+            i = i.strip('0')
+            if i not in inp:
+                inp.append(i)
+    for temp in inp:
+        for i in check:
+            temp = temp.replace(i, "")
+        temp = temp.strip('0')
+        check.add(temp)
+    real = set()
+    for cd in check:
+        for i in check:
+            if i != cd:
+                cd = cd.replace(i, "")
+        real.add(cd)
+    real -= {''}
+    for t in real:
+        h = __hex_to_bin(t)
+        for j in range(len(h)-1, -1, -1):
+            if h[j] == '1':
+                p = []
+                ck = '1'
+                cnt = 1
+                for l in range(j-1, -1, -1):
+                    if h[l] != ck:
+                        p.append(cnt)
+                        cnt = 1
+                        ck = h[l]
                     else:
-                        odd += temp
-                    pw_cnt -= 1
-            if pw_cnt == 0:
+                        cnt += 1
+                    if len(p) == 4:
+                        break
+                base = min(p)
+                a = j - (56 * base) + 1
+                if a > 0:
+                    pw = list(h[a:j + 1])
+                else:
+                    pw = ['0' for _ in range(-a)] + list(h[:j+1])
+                even = odd = 0
+                for k in range(8):
+                    encode = pw[k*base*7:(k+1)*base*7]
+                    decoded = __decode(encode)
+                    if k & 1:
+                        even += decoded
+                    else:
+                        odd += decoded
                 if (odd * 3 + even) % 10 == 0:
+                    password.append((odd + even, t, odd, even))
                     answer += odd + even
                 break
     return answer
+
 
 def main():
     tcs = int(input())
@@ -84,7 +119,7 @@ def main():
         n, m = map(int, input().split())
         code = []
         for _ in range(n):
-            code.append(list(input()))
+            code.append(input())
         print('#{} {}'.format(tc+1, solution(code, n, m)))
 
 
