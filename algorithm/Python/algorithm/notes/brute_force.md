@@ -78,7 +78,7 @@ def perm(n, k):
             swap(k, i)
 ```
 
-위 코드는 ${}_n\mathrm{P}{n}$인 경우 사용하기 좋은 순열 코드이다.
+위 코드는 ![permutation](https://latex.codecogs.com/gif.latex?\inline&space;{}_n\mathrm{P}_{k})인 경우 사용하기 좋은 순열 코드이다.
 
 ```python
 def perm(n, r, k):
@@ -96,7 +96,7 @@ def perm(n, r, k):
 
 > 집합에 포함된 원소들을 선택하는 것.
 
-n개의 원소를 포함한 집합에서 자기 자신과 공집합을 포함하여 모든 부분집합의 갯수는 $2^n$개 이다.
+n개의 원소를 포함한 집합에서 자기 자신과 공집합을 포함하여 모든 부분집합의 갯수는 ![2^n](https://latex.codecogs.com/gif.latex?2^n)개 이다.
 원소의 수가 증가하면 부분집합의 갯수는 지수적으로 증가하게된다.
 
 ```python
