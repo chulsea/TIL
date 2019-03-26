@@ -55,19 +55,15 @@ loop에서 보통의 반복 구조는 다음과 같다.
 
 > 서로 다른 것들 중 몇개를 뽑아서 한 줄로 나열하는 것 
 
-$$
-{}_n\mathrm{P}_{K}
-$$
+![permutation](https://latex.codecogs.com/gif.latex?\inline&space;{}_n\mathrm{P}_{k})
 
 순열은 위와 같이 표현한다.
 
 그리고 위 순열식은 다음과 같은 식이 된다.
 
-$$
-{}_n\mathrm{P}_{k} = n\times(n-1)\times(n-2)\times...\times(n-r+1)
-$$
+![permutation equation](https://latex.codecogs.com/gif.latex?\inline&space;{}_n\mathrm{P}_{k}&space;=&space;n\times(n-1)\times(n-2)\times...\times(n-r&plus;1))
 
-${}_n\mathrm{P}_{n}$은 $n!$이다.
+![permutation](https://latex.codecogs.com/gif.latex?\inline&space;{}_n\mathrm{P}_{k})은 ![n factorial](https://latex.codecogs.com/gif.latex?\inline&space;n!)이다.
 
 순열의 경우 팩토리얼 복잡도를 가지므로 n이 12이상 되버리면 시간 복잡도는 폭발적으로 증가하게된다.
 
