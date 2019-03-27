@@ -1,11 +1,21 @@
+def change(arr, l):
+    base = arr[l]
+    k = l
+    for i in range(l+1, len(arr)):
+        if arr[i] < base:
+            arr[k], arr[i] = arr[i], arr[k]
+            k += 1
+        if arr[i] > base:
+            break
+
 def solution(candies):
-    ans = 0x7fffffff
+    ans = 0
+    n = len(candies)
     candies.sort()
-    l = len(candies)
-    temp = candies[0] + candies[1]
-    for i in range(2, l):
-        temp = temp*2 + candies[i]
-    ans = min(ans, temp)
+    for i in range(n-1):
+        change(candies, i)
+        candies[i+1] += candies[i]
+        ans += candies[i+1]
     return ans
 
 
