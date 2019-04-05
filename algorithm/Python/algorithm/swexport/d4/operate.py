@@ -3,7 +3,7 @@ def bfs(dp, m, n):
     rear = 0
     queue = [n]
     dp[n] = 1
-    while queue:
+    while rear < len(queue):
         cur = queue[rear]
         rear += 1
         if cur == m:
